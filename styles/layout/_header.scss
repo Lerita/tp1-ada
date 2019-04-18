@@ -1,0 +1,43 @@
+h1 {
+    font-family: $logo-font;
+    color: $title-color;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sub-menu {
+    display: none;
+}
+
+nav {
+    ul {
+        font-family: $main-font;
+        display: flex;
+        width: 500px;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-evenly;
+        padding: 0;
+        color: $font-color;
+    }
+
+    a:link {
+        color: $font-color;
+    }
+    
+    a:visited {
+        color: $font-color;
+    }
+    
+    a:hover {
+        color: $title-color;
+    }
+    
+    a:active {
+        color: $title-color;
+    }
+}
