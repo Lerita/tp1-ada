@@ -349,10 +349,6 @@ a {
   text-decoration: none;
 }
 
-.sub-menu {
-  display: none;
-}
-
 nav ul {
   font-family: "IBM Plex Mono", monospace;
   display: flex;
@@ -376,6 +372,31 @@ nav a:active {
   color: #fc784f;
 }
 
+.sub-menu {
+  font-family: "IBM Plex Mono", monospace;
+  position: absolute;
+  width: 110px;
+  height: 100px;
+  background-color: #f8f8f8;
+  display: none;
+  z-index: 1;
+  padding-left: 30px;
+  padding-top: 5px;
+  top: 25px;
+  left: -40px;
+}
+
+.menu-title {
+  position: relative;
+}
+.menu-title:hover {
+  color: #fc784f;
+  cursor: pointer;
+}
+.menu-title:hover .sub-menu {
+  display: block;
+}
+
 .page-container {
   display: flex;
   width: 100%;
@@ -397,8 +418,10 @@ nav a:active {
   background-color: #fc784f;
   opacity: 0.7;
   position: absolute;
+  top: 500px;
   font-family: "IBM Plex Mono", monospace;
   color: #ffffff;
+  transition: top 0.5s;
 }
 
 .post-info {
@@ -414,16 +437,18 @@ nav a:active {
 
 .carousel-image-container {
   width: 320px;
+  height: 460px;
   position: relative;
   overflow: hidden;
 }
 .carousel-image-container:hover .description-image {
-  top: 300px;
+  top: 360px;
+  cursor: pointer;
 }
 
 .image-carousel {
   width: 100%;
-  height: 400px;
+  height: 460px;
 }
 
 /* ======= MENÚ DE IMÁGENES DEL MEDIO ======= */
@@ -465,6 +490,7 @@ nav a:active {
 }
 .image-name:hover {
   background-color: #fc784f;
+  cursor: pointer;
 }
 
 .image-middle {
@@ -484,8 +510,8 @@ main {
   display: flex;
   flex-direction: column;
   flex-basis: 200px;
-  flex-grow: 3;
-  margin-right: 5px;
+  flex-grow: 2;
+  margin-right: 10px;
 }
 
 article {
@@ -497,10 +523,11 @@ article {
 }
 article p {
   color: #808080;
+  font-size: 14px;
 }
 article h4 {
   font-size: 20px;
-  padding-left: 20px;
+  padding-left: 15px;
   margin: 10px 0;
 }
 
@@ -528,6 +555,9 @@ article h4 {
 }
 .read-more h5 {
   margin: 0;
+}
+.read-more:hover {
+  cursor: pointer;
 }
 
 /* ======= ASIDE ======= */
@@ -600,6 +630,18 @@ footer ul {
   color: #808080;
   justify-content: space-between;
   padding: 0;
+}
+footer a:link {
+  color: #808080;
+}
+footer a:visited {
+  color: #808080;
+}
+footer a:hover {
+  color: #808080;
+}
+footer a:active {
+  color: #808080;
 }
 
 /*# sourceMappingURL=main.css.map */

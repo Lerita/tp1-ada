@@ -15,4 +15,21 @@ footer {
         justify-content: space-between;
         padding: 0;
     }
+
+    a:link {
+        color: $font-color;
+    }
+    
+    a:visited {
+        color: $font-color;
+    }
+    
+    a:hover {
+        color: $font-color;
+    }
+    
+    a:active {
+        color: $font-color;
+    }
+
 }
