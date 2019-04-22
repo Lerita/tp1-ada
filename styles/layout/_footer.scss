@@ -4,6 +4,7 @@ footer {
     border-bottom: 1px solid $line-color;
     align-items: center;
     margin: 50px 0px;
+    position: relative;
 
     ul {
         display: flex;
@@ -32,4 +33,37 @@ footer {
         color: $font-color;
     }
 
+}
+
+.fa-arrow-circle-up {
+    visibility: hidden;
+    position: absolute;
+    top: 68px;
+    left: 50%;
+    transform: translateX(-12px);
+    color: $title-color;
+    text-decoration: none;
+    font-size: 24px;
+
+    a:link, a:visited, a:hover, a:active {
+        color: $title-color;
+    }
+}
+
+@media (max-width: 960px) {
+    .fa-arrow-circle-up {
+        visibility: visible;
+    }
+}
+
+@media (max-width: 800px) {
+    footer span {
+        display: none;
+    }
+}
+
+@media (max-width: 460px) {
+    footer {
+       margin-top: 10px;
+    }
 }

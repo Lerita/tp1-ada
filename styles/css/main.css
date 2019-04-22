@@ -349,54 +349,141 @@ a {
   text-decoration: none;
 }
 
-nav ul {
+nav {
+  width: 80%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-menu {
   font-family: "IBM Plex Mono", monospace;
   display: flex;
   width: 500px;
+  height: 40px;
+  margin: 0;
+  line-height: 40px;
   flex-direction: row;
   list-style: none;
   justify-content: space-evenly;
   padding: 0;
   color: #808080;
 }
-nav a:link {
+.main-menu a:link, .main-menu a:visited {
   color: #808080;
 }
-nav a:visited {
-  color: #808080;
-}
-nav a:hover {
-  color: #fc784f;
-}
-nav a:active {
+.main-menu a:hover, .main-menu a:active {
   color: #fc784f;
 }
 
 .sub-menu {
+  display: none;
   font-family: "IBM Plex Mono", monospace;
   position: absolute;
-  width: 110px;
-  height: 100px;
+  width: 120px;
+  height: 130px;
   background-color: #f8f8f8;
-  display: none;
   z-index: 1;
   padding-left: 30px;
-  padding-top: 5px;
-  top: 25px;
-  left: -40px;
+  top: 40px;
+  left: -30px;
+  list-style: none;
+  color: #808080;
 }
 
 .menu-title {
   position: relative;
+  padding-bottom: 20px;
 }
 .menu-title:hover {
   color: #fc784f;
   cursor: pointer;
 }
 .menu-title:hover .sub-menu {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+.menu-mobile {
+  display: none;
+  flex-basis: 200px;
+  height: 30px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  line-height: 30px;
+  background-color: #fc784f;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+
+.fa-bars {
+  margin-top: 7px;
+  margin-right: 10px;
+}
+
+.menu-mobile-title {
+  color: #FFFFFF;
+  font-family: "IBM Plex Mono", monospace;
+  display: none;
+  margin: 0;
+}
+
+.sub-menu-mobile {
+  display: none;
+  list-style: none;
+}
+
+.menu-mobile-list {
+  display: none;
+  width: 180px;
+  height: 125px;
+  background-color: #fc784f;
+  color: #FFFFFF;
+  font-family: "IBM Plex Mono", monospace;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-90px);
+  z-index: 2;
+  list-style: none;
+  padding-top: 5px;
+  padding-left: 0;
+}
+.menu-mobile-list a:link, .menu-mobile-list a:visited {
+  color: #FFFFFF;
+}
+.menu-mobile-list a:hover, .menu-mobile-list a:active {
+  color: #000000;
+}
+
+@media (max-width: 650px) {
+  .main-menu {
+    display: none;
+  }
+
+  .menu-mobile, .menu-mobile-title {
+    display: flex;
+  }
+
+  .menu-mobile-title:hover {
+    color: #000000;
+    cursor: pointer;
+  }
+  .menu-mobile-title:hover .menu-mobile-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 390px) {
+  header h1 {
+    font-size: 40px;
+  }
+}
 .page-container {
   display: flex;
   width: 100%;
@@ -440,6 +527,7 @@ nav a:active {
   height: 460px;
   position: relative;
   overflow: hidden;
+  margin: 10px;
 }
 .carousel-image-container:hover .description-image {
   top: 360px;
@@ -452,7 +540,7 @@ nav a:active {
 }
 
 /* ======= MENÚ DE IMÁGENES DEL MEDIO ======= */
-.container {
+.home-container {
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -462,16 +550,26 @@ nav a:active {
 
 .middle-container {
   display: flex;
-  width: 100%;
+  flex-basis: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .image-container {
-  width: 350px;
-  height: 220px;
+  width: 40%;
+  max-width: 350px;
+  height: auto;
+  flex-shrink: 1;
   border-radius: 20%;
   overflow: hidden;
   position: relative;
+  margin: 10px;
+  justify-content: space-between;
+}
+
+.image-middle {
+  width: 100%;
+  height: auto;
 }
 
 .image-name {
@@ -480,9 +578,9 @@ nav a:active {
   background-color: white;
   border-radius: 30px;
   position: absolute;
-  top: 75px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-100px);
+  transform: translate(-100px, -30px);
   text-align: center;
   line-height: 30px;
   font-family: "IBM Plex Mono", monospace;
@@ -493,15 +591,10 @@ nav a:active {
   cursor: pointer;
 }
 
-.image-middle {
-  width: 350px;
-  height: 220px;
-}
-
 /* ======= ARTÍCULOS ======= */
 .main-section {
   display: flex;
-  width: 100%;
+  flex-basis: 100%;
   justify-content: space-between;
   margin-top: 30px;
 }
@@ -512,12 +605,14 @@ main {
   flex-basis: 200px;
   flex-grow: 2;
   margin-right: 10px;
+  align-items: center;
 }
 
 article {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
+  margin-bottom: 10px;
   border-top: 1px solid #e4dfe0;
   font-family: "IBM Plex Mono", monospace;
 }
@@ -541,6 +636,19 @@ article h4 {
 .post-container {
   margin-top: 20px;
   margin-left: 20px;
+  min-width: 220px;
+}
+
+.post-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-date, .post-social {
+  color: #808080;
+  font-size: 12px;
+  margin-right: 10px;
 }
 
 .read-more {
@@ -566,9 +674,10 @@ aside {
   flex-direction: column;
   flex-basis: 100px;
   flex-grow: 1;
-  margin-left: 5px;
+  margin-left: 10px;
   align-items: center;
   font-family: "IBM Plex Mono", monospace;
+  min-width: 250px;
 }
 aside p {
   margin: 0;
@@ -614,12 +723,58 @@ aside p {
   margin: 0;
 }
 
+/* ======= RESPONSIVE ======= */
+@media (max-width: 1100px) {
+  .not-on-mobile-1 {
+    display: none;
+  }
+}
+@media (max-width: 950px) {
+  .home-container, .middle-container, .main-section, .carousel {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 650px) {
+  iframe {
+    display: none;
+  }
+
+  .not-on-mobile {
+    display: none;
+  }
+
+  .carousel {
+    margin-top: 10px;
+  }
+
+  .post-container, .middle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post-container {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .image-container {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  aside {
+    min-width: 50px;
+  }
+}
 footer {
   display: flex;
   height: 80px;
   border-bottom: 1px solid #e4dfe0;
   align-items: center;
   margin: 50px 0px;
+  position: relative;
 }
 footer ul {
   display: flex;
@@ -642,6 +797,36 @@ footer a:hover {
 }
 footer a:active {
   color: #808080;
+}
+
+.fa-arrow-circle-up {
+  visibility: hidden;
+  position: absolute;
+  top: 68px;
+  left: 50%;
+  transform: translateX(-12px);
+  color: #fc784f;
+  text-decoration: none;
+  font-size: 24px;
+}
+.fa-arrow-circle-up a:link, .fa-arrow-circle-up a:visited, .fa-arrow-circle-up a:hover, .fa-arrow-circle-up a:active {
+  color: #fc784f;
+}
+
+@media (max-width: 960px) {
+  .fa-arrow-circle-up {
+    visibility: visible;
+  }
+}
+@media (max-width: 800px) {
+  footer span {
+    display: none;
+  }
+}
+@media (max-width: 460px) {
+  footer {
+    margin-top: 10px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
