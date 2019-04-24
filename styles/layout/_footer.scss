@@ -1,0 +1,36 @@
+
+footer {
+    display: flex;
+    height: 80px;
+    border-bottom: 1px solid $line-color;
+    align-items: center;
+    margin: 50px 0px;
+
+    ul {
+        display: flex;
+        flex-basis: 100%;
+        height: 20px;
+        font-family: $main-font;
+        list-style: none;
+        color: $font-color;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    a:link {
+        color: $font-color;
+    }
+    
+    a:visited {
+        color: $font-color;
+    }
+    
+    a:hover {
+        color: $font-color;
+    }
+    
+    a:active {
+        color: $font-color;
+    }
+
+}

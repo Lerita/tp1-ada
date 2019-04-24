@@ -1,0 +1,66 @@
+@media (max-width: 770px) {
+    .recetas-row {
+        flex-direction: column;
+    }
+
+    .recetas-social-network-column {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 0px;
+    }
+
+    .recetas-smaller-column {
+        width: 100%;
+    }
+
+    .recetas-main-section-column {
+        width: 100%;
+    }
+
+    .pionono-photo {
+        margin-left: 2px;
+    }
+
+    .recetas-home {
+        margin-left: 10px;
+    }
+
+    .pionono-subtext {
+        .recetas-subphoto {
+            padding-left: 2%;
+        }
+    }
+
+    .pionono-receta {
+        margin-left: 10px;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 540px) {
+    footer {
+        height: 0px;
+        align-items: baseline;
+        ul {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+
+@media (max-width: 450px) {
+    .pionono-subtext {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        ul {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+}

@@ -1,0 +1,66 @@
+h1 {
+    font-family: $logo-font;
+    color: $title-color;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    ul {
+        font-family: $main-font;
+        display: flex;
+        width: 500px;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-evenly;
+        padding: 0;
+        color: $font-color;
+    }
+
+    a:link {
+        color: $font-color;
+    }
+    
+    a:visited {
+        color: $font-color;
+    }
+    
+    a:hover {
+        color: $title-color;
+    }
+    
+    a:active {
+        color: $title-color;
+    }
+}
+
+.sub-menu {
+    font-family: $main-font;
+    position: absolute;
+    width: 110px;
+    height: 100px;
+    background-color: #f8f8f8;
+    display: none;
+    z-index: 1;
+    padding-left: 30px;
+    padding-top: 5px;
+    top: 25px;
+    left: -40px;
+}
+
+.menu-title {
+    position: relative;
+
+    &:hover {
+        color: $title-color;
+        cursor: pointer;
+    }
+
+    &:hover .sub-menu {
+        display: block;
+    }
+}
