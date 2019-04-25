@@ -177,7 +177,7 @@ body {
     }
 
     li::before{
-        content: "·";
+        content: "•";
         color: $title-color;
         display: inline-block;
         width: 1em;

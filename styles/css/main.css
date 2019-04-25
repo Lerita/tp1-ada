@@ -573,7 +573,7 @@ body {
   font-weight: bold;
 }
 .pionono-lista li::before {
-  content: "·";
+  content: "•";
   color: #fc784f;
   display: inline-block;
   width: 1em;
