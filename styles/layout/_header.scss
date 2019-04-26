@@ -1,3 +1,10 @@
+.page-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
 h1 {
     font-family: $logo-font;
     color: $title-color;
@@ -126,32 +133,5 @@ nav {
     
     a:hover, a:active {
         color: #000000;
-    }
-}
-
-@media (max-width: 650px) {
-    .main-menu {
-        display: none;
-    }
-    .menu-mobile, .menu-mobile-title {
-        display: flex;
-    }
-
-    .menu-mobile-title {
-        &:hover {
-            color: #000000;
-            cursor: pointer;
-        }
-
-        &:hover .menu-mobile-list {
-            display: flex;
-            flex-direction: column;
-            }
-    }
-}
-
-@media (max-width: 390px) {
-    header h1 {
-        font-size: 40px; 
     }
 }

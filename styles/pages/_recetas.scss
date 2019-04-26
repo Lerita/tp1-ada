@@ -1,0 +1,232 @@
+
+.recetas-banner {
+    width: 100%;
+    height: 350px;
+    background-image: url("../../images/banner.jpg");
+    background-size: cover;
+}
+
+
+.recetas-main-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.recetas-main-section-column {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.recetas-home {
+    display: flex;
+    flex-direction: row;
+    p {
+        font-family: $main-font;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+    span {
+        font-family: $main-font;
+        color: $font-color;
+    }
+    .fa-home {
+        margin-top: 17px;
+    }
+}
+
+.recetas-smaller-column {
+    width: 700px;
+    height: 100%;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
+
+.recetas-row {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.recetas-social-network-column {
+    display: flex;
+    flex-direction: column;
+    margin-top: 115px;
+    i {
+        transform: scale(1.5);
+        margin-bottom: 30px;
+        width: 15px;
+    }
+}
+
+.pionono-photo {
+    margin-left: 45px;
+    img {
+        border-radius: 30px;
+        width: 100%;
+    }
+}
+
+.pionono-subtext {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .recetas-subphoto {
+        padding-left: 75px;
+        font-family: $main-font;
+        color: $font-color;
+    }
+}
+
+.recetas-likes {
+    display: flex;
+    flex-direction: row;
+    color: $font-color;
+    p {
+        font-family: $main-font;
+        margin-right: 15px;
+    }
+    i {
+        margin-top: 17px;
+        margin-right: 10px;
+    }
+}
+
+.pionono-receta {
+    margin-left: 75px;
+    font-family: $main-font;
+}
+
+.pionono-introduccion {
+    h3 {
+        margin-left: 10px;
+        size: 18px;
+    }
+    p {
+        color: $font-color;
+    }
+}
+
+.pionono-cita {
+    margin-top: 50px;
+    border-left: 1px solid $title-color;
+    p {
+        padding-left: 24px;
+    }
+    .autora-cita {
+        margin-top: 32px;
+        font-weight: bold;
+        color: $font-color;
+    }
+}
+
+.pionono-lista {
+    font-family: $main-font;
+    margin-top: 50px;
+    ul {
+        list-style: none;
+        color: $font-color;
+        li {
+            margin-bottom: 5px;
+            margin-left: -20px;
+            font-weight: bold;
+        }
+    }
+
+    li::before{
+        content: "•";
+        color: $title-color;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+}
+
+.icon-background-facebook {
+    width: 40px;
+    height: 40px;
+    background-color: $facebook-color;
+    color: $social-network-color;
+    border-radius: 50%;
+    .fa-facebook-f {
+        color: $social-network-color;
+        position: absolute;
+        left: 43%;
+        top: 30%;
+    }
+}
+
+.icon-background-twitter {
+    width: 40px;
+    height: 40px;
+    background-color: $twitter-color;
+    color: $social-network-color;
+    border-radius: 50%;
+    .fa-twitter {
+        background-color: $twitter-color;
+        color: $social-network-color;
+        position: absolute;
+        left: 30%;
+        top: 35%;
+    }
+}
+
+.icon-background-google {
+    width: 40px;
+    height: 40px;
+    background-color: $google-plus-color;
+    border-radius: 50%;
+    .fa-google-plus-g {
+        background-color: $google-plus-color;
+        color: $social-network-color;
+        position: absolute;
+        left: 23%;
+        top: 27%;
+    }
+}
+
+
+.icon-background-instagram {
+    width: 40px;
+    height: 40px;
+    background-color: $instagram-color;
+    color: $social-network-color;
+    border-radius: 50%;
+    .fa-instagram {
+    color: $social-network-color;
+    background-color: $instagram-color;
+    position: absolute;
+    left: 32%;
+    top: 30%;
+    }
+}
+
+.icon-background-pinterest {
+    width: 40px;
+    height: 40px;
+    background-color: $pinterest-color;
+    color: $social-network-color;
+    border-radius: 50%;
+    .fa-pinterest-p {
+    background-color: $pinterest-color;
+    color: $social-network-color;    
+    position: absolute;
+    left: 34%;
+    top: 30%;
+    }
+
+}
+
+
+.recetas-social-network-column {
+    div {
+        position: relative;
+        margin-top: 10px;
+    }
+}

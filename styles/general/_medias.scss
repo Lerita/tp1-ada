@@ -1,0 +1,93 @@
+@media (max-width: 960px) {
+    .fa-arrow-circle-up {
+        visibility: visible;
+    }
+}
+
+@media (max-width: 815px) {
+    footer span {
+        display: none;
+    }
+}
+
+@media (max-width: 770px) {
+    .recetas-row {
+        flex-direction: column;
+    }
+
+    .recetas-social-network-column {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    .recetas-smaller-column {
+        width: 100%;
+    }
+
+    .recetas-main-section-column {
+        width: 80%;
+    }
+
+    .pionono-photo {
+        margin-left: 2px;
+    }
+
+    .recetas-home {
+        margin-left: 10px;
+    }
+
+    .pionono-subtext {
+        .recetas-subphoto {
+            padding-left: 2%;
+        }
+    }
+
+    .pionono-receta {
+        margin-left: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .recetas-banner {
+        margin-top: 20px;
+    }
+
+    .main-menu {
+        display: none;
+    }
+    .menu-mobile, .menu-mobile-title {
+        display: flex;
+    }
+
+    .menu-mobile-title {
+        &:hover {
+            color: #000000;
+            cursor: pointer;
+        }
+
+        &:hover .menu-mobile-list {
+            display: flex;
+            flex-direction: column;
+            }
+    }
+}
+
+@media (max-width: 460px) {
+    footer {
+       margin-top: 10px;
+    }
+
+    .pionono-subtext {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 390px) {
+    header h1 {
+        font-size: 40px; 
+    }
+}

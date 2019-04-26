@@ -1,3 +1,4 @@
+
 footer {
     display: flex;
     height: 80px;
@@ -32,7 +33,6 @@ footer {
     a:active {
         color: $font-color;
     }
-
 }
 
 .fa-arrow-circle-up {
@@ -47,23 +47,5 @@ footer {
 
     a:link, a:visited, a:hover, a:active {
         color: $title-color;
-    }
-}
-
-@media (max-width: 960px) {
-    .fa-arrow-circle-up {
-        visibility: visible;
-    }
-}
-
-@media (max-width: 800px) {
-    footer span {
-        display: none;
-    }
-}
-
-@media (max-width: 460px) {
-    footer {
-       margin-top: 10px;
     }
 }
