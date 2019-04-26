@@ -414,7 +414,7 @@ body {
 .recetas-banner {
   width: 100%;
   height: 350px;
-  background-image: url("../../img/banner.jpg");
+  background-image: url("../../images/banner.jpg");
   background-size: cover;
 }
 
@@ -471,33 +471,9 @@ body {
   margin-top: 115px;
 }
 .recetas-social-network-column i {
-  transform: scale(2);
-  border-radius: 50%;
+  transform: scale(1.5);
   margin-bottom: 30px;
   width: 15px;
-}
-
-.fa-facebook-f {
-  background-color: #4267b2;
-  color: white;
-}
-
-.fa-twitter {
-  background-color: #1da1f3;
-  color: white;
-}
-
-.fa-google-plus {
-  color: #dd4b39;
-}
-
-.fa-instagram {
-  color: white;
-  background-color: #8f6147;
-}
-
-.fa-pinterest {
-  color: #bd081b;
 }
 
 .pionono-photo {
@@ -548,7 +524,7 @@ body {
 
 .pionono-cita {
   margin-top: 50px;
-  border-left: 1px solid orange;
+  border-left: 1px solid #fc784f;
 }
 .pionono-cita p {
   padding-left: 24px;
@@ -578,6 +554,84 @@ body {
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+}
+
+.icon-background-facebook {
+  width: 40px;
+  height: 40px;
+  background-color: #4267b2;
+  color: white;
+  border-radius: 50%;
+}
+.icon-background-facebook .fa-facebook-f {
+  color: white;
+  position: absolute;
+  left: 43%;
+  top: 30%;
+}
+
+.icon-background-twitter {
+  width: 40px;
+  height: 40px;
+  background-color: #1da1f3;
+  color: white;
+  border-radius: 50%;
+}
+.icon-background-twitter .fa-twitter {
+  background-color: #1da1f3;
+  color: white;
+  position: absolute;
+  left: 30%;
+  top: 35%;
+}
+
+.icon-background-google {
+  width: 40px;
+  height: 40px;
+  background-color: #dd4b39;
+  border-radius: 50%;
+}
+.icon-background-google .fa-google-plus-g {
+  background-color: #dd4b39;
+  color: white;
+  position: absolute;
+  left: 23%;
+  top: 27%;
+}
+
+.icon-background-instagram {
+  width: 40px;
+  height: 40px;
+  background-color: #8f6147;
+  color: white;
+  border-radius: 50%;
+}
+.icon-background-instagram .fa-instagram {
+  color: white;
+  background-color: #8f6147;
+  position: absolute;
+  left: 32%;
+  top: 30%;
+}
+
+.icon-background-pinterest {
+  width: 40px;
+  height: 40px;
+  background-color: #bd081b;
+  color: white;
+  border-radius: 50%;
+}
+.icon-background-pinterest .fa-pinterest-p {
+  background-color: #bd081b;
+  color: white;
+  position: absolute;
+  left: 34%;
+  top: 30%;
+}
+
+.recetas-social-network-column div {
+  position: relative;
+  margin-top: 10px;
 }
 
 footer {
@@ -619,6 +673,7 @@ footer a:active {
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 0px;
+    margin-bottom: 10px;
   }
 
   .recetas-smaller-column {
@@ -646,7 +701,7 @@ footer a:active {
     text-align: center;
   }
 }
-@media (max-width: 540px) {
+@media (max-width: 550px) {
   footer {
     height: 0px;
     align-items: baseline;
